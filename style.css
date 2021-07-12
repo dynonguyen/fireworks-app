@@ -1,0 +1,115 @@
+@import url('https://fonts.google.com/specimen/Abril+Fatface');
+*{
+  font-family: 'Abril Fatface', sans-serif;
+}
+
+body{
+  margin:0;
+  padding:0;
+  overflow:hidden;
+  height:100vh; 
+  background:#111;
+}
+
+p{
+  position:fixed;
+  width:100%;
+  text-align:center;
+  color:rgba(129, 122, 218, 0.1);
+  left:50%;
+  top: 50%;
+  transform: translate(-50%,-50%);
+  font-size: 70px;
+  font-weight: 800;
+}
+
+button{
+  background:rgb(219, 70, 2);
+  border: 1px solid rgb(144, 47, 2);
+  border-radius:4px;
+  color:#fff;
+  padding: 5px 15px;
+  margin-bottom:5px;
+  cursor:pointer;
+  transition:.3s all;
+  outline:none;
+  box-shadow:0px 0px 5px rgb(160, 52, 2);
+}
+
+button:hover{
+  background: rgb(114, 38, 2);
+}
+
+button:active{
+  transform:translate(-2px, 2px);
+}
+
+.option{
+  position: fixed;
+  left: 40px;
+  bottom: 40px;
+}
+
+label{
+  font-size:14px;
+  color:rgb(206, 191, 191);
+}
+
+input[type="range"]{
+  -webkit-appearance:none;
+  appearance:none;
+  height:5px;
+  margin-top:20px;
+  background-image:linear-gradient(45deg ,#db0094, #0000ff, #ffff00, #ff0000);
+  outline:none;
+  cursor:pointer;
+  width:200px;
+  border-radius:10px;
+  border:1px solid #fff;
+  background-size: 400%;
+  animation: animationBackground 20s infinite;
+}
+
+input[type="range"]::-webkit-slider-thumb{
+  -webkit-appearance: none;
+  height: 20px;
+  width: 20px;
+  margin-top:-1px;
+  border-radius:50%;
+  border:3px solid #fff;
+  box-shadow:0px 0px 5px 2px #fff;
+  background-image:linear-gradient(0deg ,#db0094,#0000ff, #ffff00, #ff0000);
+}
+
+input[type="range"]::-webkit-slider-thumb:active{
+  background:white;
+}
+
+input[type="range"]::slider-thumb{
+  -webkit-appearance: none;
+  height: 20px;
+  width: 20px;
+  margin-top:-1px;
+  border-radius:50%;
+  border:3px solid #fff;
+  box-shadow:0px 0px 5px 2px #fff;
+  background-image:linear-gradient(0deg ,#db0094, #0000ff, #ffff00, #ff0000, #db0094, #0000ff, #ffff00, #ff0000);
+}
+
+.fas{
+    color: white;
+    font-size: 200%;
+    margin-right: 20px;
+}
+
+@keyframes animationBackground{
+  0%{
+    background-position: 0 0;
+  }
+  50%{
+    background-position: 300% 0;
+  }
+  100%{
+    background-position: 0 0;
+  }
+}
